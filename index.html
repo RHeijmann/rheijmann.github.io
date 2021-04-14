@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4e0248d9f0.js" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="./js/get-points.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" />
+    
+    <title>Rik Heijmann | Business Intelligence & Data Science Specialist</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header-1" class="header">
+        <div class="container">
+            <nav id="navigation-1" class="navigation">
+                <p class="logo">Rik Heijmann: COVID-19</p>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>Welke gevolgen heeft COVID-19<br> in <span class="txt-type" data-wait="3000" data-words='["Eindhoven?", "Amsterdam?", "Maastricht?", "Den Helder?", "Rotterdam?"]'></span></span>
+            </h1>
+            <p class="section-lead"></p>
+            <a href="#virus-visualisation" class="btn-light">Kom het te weten!</a>
+        </div>
+        </div>
+    </header>
+
+    <!-- COVID-19 visualisatie -->
+	<section id="virus-visualisation">
+	</section>
+
+    <!-- Widget: Timeline -->
+    <section id="timeline-1" class="widget_timeline py-4 bg-dark">
+        <div class="container">
+            <h2 class="section-title">Hoe is deze visualisatie ontstaan?</h2>
+            <div class="bottom-line"></div>
+            <p class="section-lead">Een overzicht van alle stappen en design keuzes. Vergeet niet om naar de bijlages te kijken!</p>
+            <ul>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 15 februari 2021 - Het project</h3>
+                        <p>Vanuit de minor "Data Visualisation" van Zuyd Hogeschool is de opdracht gekregen om onderzoek te doen naar het ontwikkelen van nieuwe data visualisatie vormen. Een mooi gebied waarin dit toegepast kan worden is de visualisatie van de huidige COVID-19 pandemie.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 22 februari 2021 - Data, data en nog meer data</h3>
+                        <p>
+                            Zomaar data tonen die al vaak in samenhang is gezien, brengt geem mooie inzichten met zich mee. Er is dus een hoop data nodig. Dit zorgt voor die interressante weetjes en feiten die veelal niet verteld worden. Wat is de samenhang tussen COVID-19 en de brandstofprijzen? Of tussen COVID-19 en de uitgaven van de regering. <br> Daarvoor zijn de volgende gegevens verzameld:
+                        </p><br>
+                        
+                            <p> - Bevolkingsontwikkeling: Sterfte, geboorte en de vestigingscijfers per gemeente,</p>
+                            <p> - De uitgaven van de Centrale Overheid,</p>
+                            <p> - Het consumentenvertrouwen: Per branche de omzet en het aantal klanten,</p>
+                            <p> - De prijs van diverse brandstoffen: Aardgas en elektriciteit,</p>
+                            <p> - De prijs van diverse motorbrandstoffen waaronder LPG, benzine en diesel,</p>
+                            <p> - Het aantal vliegtuigvluchten inkomend en uitgaand vanuit Nederlandse vliegvelden,</p>
+                            <p> - De werkloosheidscijfers per branche.</p>
+
+                        <p><br>Deze gegevens worden middels pandas (Python data Analysis Library) verwerkt tot 2 dimensionale datastructuren waarbij de dimensies 'tijd in maand' en 'gemeente' worden gehanteerd als knooppunten. Dit worden de uiteindelijke gegevens waarvanuit de gebruikers ook kunnen filteren. </p>
+                        <a href="img/timeline/data.png" data-lightbox="22-2-2021" data-title="Windows Bestandsverkenner toont de map met alle data."><h3>Klik voor bijlagen</h3></a>
+                        <a href="img/timeline/data_code.png" data-lightbox="22-2-2021" data-title="Het programmeersel dat alle data die relevant is aan COVID samenvoegt."></a>
+                        <a href="img/timeline/data_converted.png" data-lightbox="22-2-2021" data-title="Het uiteindelijke bestand waarvanuit alle visualisatie worden gegenereerd."></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>
+                            <i class="fas fa-chevron-right"></i> 8 maart 2021 - Het idee
+                        </h3>
+                        <p>
+                            Er is nog veel onrust tussen de Nederlandse burgers over de gevolgen van de COVID-19 pandemie. Wellicht kan dit getackeld worden met een visualisatie waarbij ontdekkers zich kunnen inleven. <br><br> Een visualisatie die bij een hoger reproductiegetal ook daadwerkelijk meer geïnfecteerde mensen toont. En bij een hoger sterftecijfer meer doden. Alleen dan visueel, als in een cartoon. Nog specifieker isometrisch.
+                        </p>
+                        <a href="img/timeline/sketch.jpg" data-lightbox="8-3-2021" data-title="Schets van de uiteindelijke poster. Waarbij het doel is om middels visuele interpretaties aan te duiden hoe een periode er uit zag. Meer werknemers, minder werkloosheid. Meer ziekenhuisbedden, meer opgenomen patiënten."><h3>Klik voor bijlagen</h3></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 15 maart 2021 - Het begin</h3>
+                        <p>
+                            Na enkele lessen in D3.js en het visualiseren middels diverse data visualisatie tools, is er gekozen om deze technieken hand-in-hand in te zetten. Middels Inkscape wordt een SVG-afbeelding ontwikkeld. Die middels D3.js wordt gemanipuleerd om de diverse COVID-19-statistieken te tonen. <br><br>Voordat ik hier aan begon heb ik als eerste mijn kennis over D3.js ingezet om als het ware bouwblokken te onwikkelen voor de uiteindelijke visualisatie.
+                            Denk aan: menubalken, zoomfunctionaliteiten en systemen om gegevens efficiënt in te lezen en door de gebruiker te laten manipuleren.
+                        </p>
+                        <a href="img/timeline/worldmap.png" data-lightbox="15-3-2021" data-title="Een zelfgemaakt D3.js visualisatie voor het tonen van kaarten. Inclusief zoom, tooltips en dynamische kleuren."><h3>Klik voor bijlagen</h3></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 22 maart 2021 - Visueel gereed</h3>
+                        <p>
+                            De visualisatie is enigzins al af. Deze dient enkel nog ingedeeld te worden. Voordat deze daadwerkelijk kan worden geprogrammeerd.<br><br>De truc is vrij simpel. SVG's kennen diversen lagen en groepen. Alle onderdelen van iedere actor wordt gegroepeerd, en alle actoren dienen zich in de laag met actoren te bevinden. Zo kunnen alle actoren met gemak getoond en weer verborgen worden. 
+                        </p>
+                        <a href="img/timeline/animation.svg" data-lightbox="22-3-2021" data-title="Een SVG gemaakt middels Inkscape. Het idee was om de diverse actoren (personen, voertuigen en etc.) te verbergen en te tonen op basis van data."><h3>Klik voor bijlagen</h3></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 29 maart 2021 - Visueel haast niet werkend</h3>
+                        <p>
+                            Deze week voelde ik mij als een loodgieter bij een gebroken vissenkom. Het inladen van de visualisatie verliep op eerste zicht met gemak. Echter blijkt na gebruik dat diverse elmenten zonder reden zich verschuiven en niet werken zoals verwacht. Het automatisch schalen van de visualisatie zorgde voor een sterk verschil tussen de grootte van elementen en hun oorspronkelijke locatie.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 5 april 2021 - We laten het schip varen</h3>
+                        <p>
+                            Het idee van een isometrisch landschap, die de ontdekker inzicht gaf in de stand van pandemiezaken nam te veel water. <br><br> Het was wel degelijk te redden maar dit nam te veel tijd in beslag. Tijd die in deze laatste 2 weken erg van belang is.<br><br> Het nieuwe idee is een visualisatie op basis van de wetenschappelijke structuurtekeningen van het COVID-19 virus. De diverse membranen en eiwitten tonen diverse statistieken weer. Zo zijn de spike-eiwitten (die verantwoordelijk zijn voor het hechten aan het menselijk weefsel) ingezet voor het tonen van het sterfte cijfer. 
+                        </p>
+                        <a href="img/timeline/coronavirus.jpg" data-lightbox="5-4-2021" data-title="De wetenschappelijke structuur van het coronavirus. Copyright Centrum for Disease Control."><h3>Klik voor bijlagen</h3></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3><i class="fas fa-chevron-right"></i> 8 april 2021 - Het schip vaart direct digitaal</h3>
+                        <p>
+                            Er was niet meer zo heel veel tijd om alles op rit te krijgen. Daarom heb ik de volle 100% ingezet om alles werkend te krijgen. Maar hiervoor ben ik direct bezig geweest met het ontwikkelen van digitale sketches en oplossingen.
+                        </p>
+                        <a href="img/legenda.png" data-lightbox="8-4-2021" data-title="Het ontwerp document en tevens de legenda voor de gemaakt visualisatie."><h3>Klik voor bijlagen</h3></a>
+                        <a href="img/timeline/poster_digitalsketch.png" data-lightbox="8-4-2021" data-title="Een digitale sketch van de poster die bij deze data hoort."></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer-1" class="footer">
+        <div class="content container">
+            <p> Copyright &copy Rik Heijmann; 2021. Alle rechten voorbehouden. Met dank aan Zuyd Hogeschool.</p>
+            <!-- <div class="social">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div> -->
+        </div>
+    </footer>
+
+    <script src="js/typewriter.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="./js/visualisation_virus.js"></script>
+    <script src="./js/visualisation_virus_data.js"></script>
+    <script src="./js/visualisation_virus_site.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
+</body>
+
+</html>
